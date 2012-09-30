@@ -1,0 +1,25 @@
+HTML 5 File Manager
+
+Author: Alexander Wattenbach
+Date: April 2012
+Last Change: 2012/09/30
+
+Description:
+This is a small script which allows you to 
+organize elemets within variable containers. 
+
+The elements and folder are database (mysql) tagged and you 
+are able to sort them and tag them via frontend.
+
+In the backend PHP is used to handle the javascript request and save tags in the database. 
+
+The frontend is completly made in HTML5.
+Some CSS3 is used and jquery is needed.
+The animation was made with jquery.
+
+Files:
+dbdumb.sql can be used to build the database structure for this project
+jsbase/main.js is the javascript file for the animation
+globals.inc.php has the database config and the main php function to move elements
+loadElement.php is loaded by javascript to show a valid box within the new container
+index.php is for building the frontend.
