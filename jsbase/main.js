@@ -29,6 +29,7 @@ function renderSortableItems() {
     tolerance: "pointer",
     cursorAt: { left: 100, top: 60 },
     containment: "document",
+    scrollSensitivity: 300,
     start: function (event,ui) {
       var oldParentFolder= $(ui.item).closest("div").attr("id");
       var oldOrder = [];
