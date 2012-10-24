@@ -17,21 +17,20 @@ $(document).ready(function(){
   renderElements();
 });
 function renderSortableItems() {
-  $("#folder_content").sortable({
-    items: 'article.element_container',
+  $("section").sortable({
+    connectWith: 'section',
     placeholder: 'element_container_placeholder',
     dropOnEmpty: true,
+    tolerance: "pointer",
     delay: 300,
     revert: 300,
-    appendTo: "#folder_content",
-    helper: "clone",
     opacity: 0.6,
-    tolerance: "pointer",
+    cancel: '#element_container_dummy',
+    scrollSensitivity: 100,
+    scrollSpeed: 10,
     cursorAt: { left: 100, top: 60 },
-    containment: "document",
-    scrollSensitivity: 300,
     start: function (event,ui) {
-      var oldParentFolder= $(ui.item).closest("div").attr("id");
+      var oldParentFolder= $(ui.item).closest("section").attr("id");
       var oldOrder = [];
       $('#' + oldParentFolder + ' article').each(function(){
         if (this.id != $(ui.item).attr("id")) {
@@ -50,7 +49,7 @@ function renderSortableItems() {
         $('#debug').append(data);
       });
       },stop : function (event,ui) {
-      var newParentFolder= $(ui.item).closest("div").attr("id");
+      var newParentFolder= $(ui.item).closest("section").attr("id");
       var elementID= $(ui.item).attr("id");
       var newOrder = [];
       $(ui.item).find('div').height('auto').slideDown();
