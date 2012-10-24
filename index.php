@@ -41,7 +41,7 @@ while ($folder_array= mysql_fetch_assoc($folder_query)) {
 	echo '
 	<div class="folder_container">
 		<div class="folder_insider">
-			<div class="element_list" id="folder_'.$i.'">';
+			<section class="element_list" id="folder_'.$i.'">';
 	$a=1;
 	if ($element_count != '0') {
 		while ($element_array= mysql_fetch_assoc($element_query)) {
@@ -54,7 +54,7 @@ while ($folder_array= mysql_fetch_assoc($folder_query)) {
 	if ($element_count == '0') echo ' style="display: block;"';
 	echo '>There is no content in <strong>'.$folder_array[name].'</strong> right now.</article>';
 echo '
-			</div>
+			</section>
 			<div class="clearfix"></div>
 			&nbsp;
 		</div>
