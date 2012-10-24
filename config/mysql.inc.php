@@ -1,8 +1,8 @@
 <?php
-$dbhost= 'db412114946.db.1and1.com'; // type here your database host
-$dbname= 'db412114946'; // type here your database name
-$dbuname= 'dbo412114946'; // type here your database username
-$dbpass= 'hans1245'; // type here your database password
+$dbhost= '***'; // type here your database host
+$dbname= '***'; // type here your database name
+$dbuname= '***'; // type here your database username
+$dbpass= '***'; // type here your database password
 
 $connection= @mysql_connect($dbhost, $dbuname, $dbpass);
 $db= mysql_select_db($dbname, $connection);
