@@ -26,7 +26,7 @@ function renderSortableItems() {
     revert: 300,
     opacity: 0.6,
     cancel: '#element_container_dummy',
-    scrollSensitivity: 100,
+    scrollSensitivity: 200,
     scrollSpeed: 10,
     cursorAt: { left: 100, top: 60 },
     start: function (event,ui) {
