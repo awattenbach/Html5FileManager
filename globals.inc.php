@@ -6,7 +6,7 @@ function showElement($element_key, $folder_id, $element_id, $move_to="") {
 	$element_array= mysql_fetch_assoc(mysql_query('SELECT * FROM tb_element WHERE id='.$element_id.' LIMIT 1'));
 	if ($move_to) $folder_id= $move_to;
 	echo "
-				<article class=\"element_container\" id=\"container_".$element_array['id']."\">
+				<article class=\"element_container\" id=\"container_".$element_array['id']."\" style=\"display: none;\">
 					<a href=\"#\"><img src=\"images/layout/elements/".$element_array['image_name'].".png\" class=\"element_image\" alt=\"\" /></a>
 					<div class=\"movement_controlls\">";
 	loadMovementControlls($folder_id, $element_id);
